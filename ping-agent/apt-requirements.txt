@@ -1,0 +1,8 @@
+# Add your system (APT) dependencies here
+# One package per line, comments start with #
+# Examples:
+# curl
+# git
+# ffmpeg
+# imagemagick
+iputils-ping

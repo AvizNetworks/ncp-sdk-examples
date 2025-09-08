@@ -1,0 +1,11 @@
+[project]
+name = "ping-agent"
+version = "0.1.0"
+description = "A custom NCP agent project"
+author = "Your Name"
+
+[agents]
+main = "agents.main_agent:main_agent"
+
+[deployment]
+# platform_url = "https://your-ncp-instance.com"
