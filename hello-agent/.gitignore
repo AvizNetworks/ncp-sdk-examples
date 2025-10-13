@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# NCP
+*.ncp
+
+# Platform credentials - DO NOT COMMIT!
+# Uncomment this if you want to keep credentials in ncp.toml
+# ncp.toml
+
+# Or use this pattern to exclude only the [platform] section
+# (requires manual management)

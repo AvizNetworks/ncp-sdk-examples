@@ -1,0 +1,5 @@
+# NCP SDK - Required for agent development
+ncp-sdk>=0.1.0
+
+# No additional dependencies needed for this example
+# The calculator agent uses only Python's built-in math operations

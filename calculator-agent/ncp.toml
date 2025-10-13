@@ -1,0 +1,14 @@
+[project]
+name = "calculator-agent"
+version = "0.1.0"
+description = "A mathematical assistant demonstrating multiple tools working together"
+
+[build]
+python_version = "3.11"
+entry_point = "agents.main_agent:agent"
+
+# Platform credentials (added by 'ncp authenticate')
+# DO NOT commit this section to version control!
+# [platform]
+# url = "https://ncp.example.com"
+# api_key = "your-api-key-here"
