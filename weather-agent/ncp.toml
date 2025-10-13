@@ -1,0 +1,10 @@
+[project]
+name = "weather-agent"
+version = "0.1.0"
+description = "A weather assistant demonstrating MCP integration with external servers"
+
+[build]
+python_version = "3.11"
+entry_point = "agents.main_agent:agent"
+
+#[platform]

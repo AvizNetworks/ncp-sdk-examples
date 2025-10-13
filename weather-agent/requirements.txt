@@ -1,0 +1,3 @@
+# MCP Server for fetching HTTP resources
+# This provides the 'fetch' tool for making HTTP requests
+mcp-server-fetch
