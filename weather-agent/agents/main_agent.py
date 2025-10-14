@@ -40,6 +40,7 @@ Always be helpful and explain the weather conditions clearly. If the fetch fails
     mcp_servers=[
         MCPConfig(
             command="mcp-server-fetch",
+            transport_type="stdio",
             args=[],
             env=None,
         )
