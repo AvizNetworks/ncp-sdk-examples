@@ -1,0 +1,15 @@
+[project]
+name = "metrics-basics-agent"
+version = "1.0.0"
+description = "Agent demonstrating Metrics API for network device inventory queries"
+author = "NCP Team"
+
+[build]
+python_version = "3.11"
+entry_point = "agents.main_agent:agent"
+
+# Platform credentials (added by 'ncp authenticate')
+# DO NOT commit this section to version control!
+# [platform]
+# url = "https://ncp.example.com"
+# api_key = "your-api-key-here"
