@@ -8,8 +8,6 @@ author = "NCP Team"
 python_version = "3.11"
 entry_point = "agents.main_agent:agent"
 
-# Platform credentials (added by 'ncp authenticate')
-# DO NOT commit this section to version control!
-# [platform]
-# url = "https://ncp.example.com"
-# api_key = "your-api-key-here"
+[platform]
+url = "https://10.4.4.33:9002"
+api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc2hvayIsInNkayI6dHJ1ZSwiZXhwIjoxNzYzNjU2MzQ2fQ.H7cf-h3ml3nr4_tlUr0AN7Xsq6fHvnb60pAlsSD2-Vc"
