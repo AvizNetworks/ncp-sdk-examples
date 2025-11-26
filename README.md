@@ -2,7 +2,7 @@
 
 **Learn by doing: hands-on examples for building AI agents with the NCP SDK**
 
-This repository contains complete, working examples that demonstrate how to build AI agents using the [NCP SDK](https://github.com/AvizNetworks/ncp-sdk). Each example is designed to teach specific concepts while providing production-ready code you can learn from.
+This repository contains complete, working examples that demonstrate how to build AI agents using the [NCP SDK](https://pypi.org/project/ncp-sdk/0.2.4/). Each example is designed to teach specific concepts while providing production-ready code you can learn from.
 
 ---
 
