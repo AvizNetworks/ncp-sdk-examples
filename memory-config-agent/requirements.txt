@@ -1,0 +1,3 @@
+# Memory Config Agent dependencies
+# The ncp-sdk is the only required dependency
+ncp-sdk

@@ -1,0 +1,12 @@
+[project]
+name = "memory-config-agent"
+version = "0.1.0"
+description = "Demonstrates memory configuration strategies (TOKEN_WINDOW and LAST_N_MESSAGES)"
+
+[build]
+python_version = "3.11"
+entry_point = "agents.main_agent:agent"
+
+[platform]
+url = "https://10.4.4.171:9001"
+api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwic2RrIjp0cnVlLCJleHAiOjE3Njg0MzkzODJ9.ns8LHfr4tgDWt_pGzSSF6Ik6gKTdJYTKFbYLqExOQmM"
