@@ -1,0 +1,12 @@
+[project]
+name = "file-agent"
+version = "0.1.0"
+description = "An NCP AI agent project"
+
+[build]
+python_version = "3.11"
+entry_point = "agents.main_agent:agent"
+
+[platform]
+url = "https://localhost:9001"
+api_key = ""

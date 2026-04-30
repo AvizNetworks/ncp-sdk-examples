@@ -1,0 +1,7 @@
+# Python dependencies for your agent
+# Add any packages your agent needs here
+
+# Example dependencies:
+# requests>=2.28.0
+# pandas>=1.5.0
+# numpy>=1.21.0
