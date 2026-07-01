@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# NCP build artifact
+*.ncp
+
+# Platform credentials - DO NOT COMMIT!
+# ncp.toml
+
+# Device credentials - DO NOT COMMIT plaintext switch passwords
+devices.yaml

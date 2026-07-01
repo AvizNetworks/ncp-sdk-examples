@@ -1,0 +1,30 @@
+# Cisco switch inventory for cisco-switch-agent.
+#
+# Each entry is one switch the agent can SSH into. Credentials live here so
+# the agent never has to ask the user for them at runtime.
+#
+# Fields:
+#   name        Friendly hostname/label (optional; defaults to mgmtIP)
+#   mgmtIP      Management IP the agent SSHes into (required)
+#   username    SSH username (required)
+#   password    SSH password (required)
+#   device_type Netmiko driver: cisco_ios | cisco_xe | cisco_nxos | cisco_xr
+#               (optional; defaults to cisco_ios)
+#   secret      Enable/privileged-exec password (optional)
+#   port        SSH port (optional; defaults to 22)
+#
+# SECURITY: this file holds plaintext credentials. It is git-ignored by
+# default (see .gitignore). Keep it out of version control.
+
+devices:
+  - name: core-sw1
+    mgmtIP: 10.4.4.61
+    username: admin
+    password: "changeme"
+    device_type: cisco_ios
+
+  - name: core-sw2
+    mgmtIP: 10.4.4.62
+    username: admin
+    password: "changeme"
+    device_type: cisco_nxos

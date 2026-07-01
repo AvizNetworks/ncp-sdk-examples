@@ -1,0 +1,3 @@
+# Python dependencies for cisco-switch-agent
+netmiko>=4.3.0
+pyyaml>=6.0

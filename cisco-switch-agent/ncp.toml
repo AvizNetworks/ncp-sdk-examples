@@ -1,0 +1,12 @@
+[project]
+name = "cisco-switch-agent"
+version = "0.1.0"
+description = "SSH into Cisco switches and report inventory, health, and traffic via show commands"
+
+[build]
+python_version = "3.11"
+entry_point = "agents.main_agent:agent"
+
+[platform]
+url = "https://10.4.4.33:9001"
+api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwic2RrIjp0cnVlLCJleHAiOjE3ODU1MzQyMzh9.0ZuvavO_4JshsROBGCOEl04Qz82TBN7VAh0vdj2vY5s"
