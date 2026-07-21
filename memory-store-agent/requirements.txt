@@ -1,0 +1,4 @@
+# NCP SDK - Required for agent development
+ncp-sdk>=1.0.4
+
+# No additional dependencies — uses only the Python standard library
