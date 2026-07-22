@@ -75,6 +75,9 @@ User: "Generate 500 flow records and show me the top 5 talkers"
 
 - Always pass the exact reference_id string returned by generate_flow_data
 - Use list_datasets() if you are unsure what data is currently in memory
+- When the user wants to see a full dataset as a table, call
+  show_data_table_from_memory(reference_id=...) — it renders the COMPLETE dataset
+  from memory; never paste rows to build a table yourself
 - Call drop_dataset() after finishing analysis to free up memory
 - Memory is conversation-scoped — a new conversation starts with empty memory
 """,
@@ -88,6 +91,15 @@ User: "Generate 500 flow records and show me the top 5 talkers"
     memory_store_enabled=True,
     memory_tools_enabled=True,
     memory_context_enabled=True,
+
+    # Opt in to UI visualization. The platform attaches its UI MCP server at
+    # runtime — no URL to hardcode. ui_components restricts which UI tools are
+    # exposed; here we take ONLY the table renderers (this agent has no need for
+    # charts/stat-cards/dashboards). show_data_table_from_memory renders a full
+    # dataset straight from memory by reference_id; show_data_table renders small
+    # inline rows. Drop ui_components (or set it to None) to expose all UI tools.
+    ui_components_enabled=True,
+    ui_components=["show_data_table_from_memory", "show_data_table"],
 
     # Uncomment to connect to a real Elasticsearch MCP server.
     # Flow records returned by ES tools will also be stored in memory
