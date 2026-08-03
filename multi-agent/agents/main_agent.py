@@ -134,4 +134,9 @@ You can delegate to multiple experts if needed. For example:
 
 Be helpful, coordinate effectively, and provide complete answers.""",
     tools=[math_tool, research_tool, writing_tool],
+    # The specialists don't depend on each other's output, so when a request
+    # needs more than one of them in the same turn (e.g. "convert 10 miles to
+    # km and research the history of the metric system"), run them
+    # concurrently instead of one at a time.
+    parallel_tool_execution=True,
 )
