@@ -1,0 +1,3 @@
+# NCP SDK - Required for agent development
+# send_status()/send_content() were added in ncp-sdk 1.2.0
+ncp-sdk>=1.2.0
