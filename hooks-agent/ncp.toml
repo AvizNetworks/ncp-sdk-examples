@@ -1,0 +1,15 @@
+[project]
+name = "hooks-agent"
+version = "0.1.0"
+description = "Agent demonstrating AgentHooks observing its own execution lifecycle"
+author = "NCP Team"
+
+[build]
+python_version = "3.11"
+entry_point = "agents.main_agent:agent"
+
+# Platform credentials (added by 'ncp authenticate')
+# DO NOT commit this section to version control!
+# [platform]
+# url = "https://ncp.example.com"
+# api_key = "your-api-key-here"
