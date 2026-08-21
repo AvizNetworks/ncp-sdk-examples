@@ -1,0 +1,15 @@
+[project]
+name = "sequential-pipeline-root-agent"
+version = "0.1.0"
+description = "Incident postmortem pipeline deployed with a SequentialAgent as the entry point itself"
+author = "NCP Team"
+
+[build]
+python_version = "3.11"
+entry_point = "agents.main_agent:postmortem_pipeline"
+
+# Platform credentials (added by 'ncp authenticate')
+# DO NOT commit this section to version control!
+# [platform]
+# url = "https://ncp.example.com"
+# api_key = "your-api-key-here"

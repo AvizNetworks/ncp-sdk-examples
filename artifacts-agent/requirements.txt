@@ -1,0 +1,7 @@
+# NCP SDK - Required for agent development
+# Artifacts() is a newer addition to ncp-sdk, not yet in a tagged release as
+# of this example - use a local/dev install of the SDK that includes it.
+ncp-sdk
+
+# No additional third-party dependencies - uses only the Python standard
+# library (tempfile) to demonstrate save_file().

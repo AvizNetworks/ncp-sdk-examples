@@ -38,5 +38,5 @@ to download it, use get_dataset_info instead.""",
     tools=[generate_device_inventory, get_dataset_info],
     memory_store_enabled=True,
     ui_components_enabled=True,
-    ui_components=["export_data_from_memory"],
+    ui_components=["export_data_from_memory", "show_data_table_from_memory"],
 )

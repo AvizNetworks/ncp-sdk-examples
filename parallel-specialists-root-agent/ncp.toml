@@ -1,0 +1,15 @@
+[project]
+name = "parallel-specialists-root-agent"
+version = "0.1.0"
+description = "Concurrent firmware/exposure/auth device audit fanning out to different specialists, deployed root-style"
+author = "NCP Team"
+
+[build]
+python_version = "3.11"
+entry_point = "agents.main_agent:device_risk_check"
+
+# Platform credentials (added by 'ncp authenticate')
+# DO NOT commit this section to version control!
+# [platform]
+# url = "https://ncp.example.com"
+# api_key = "your-api-key-here"

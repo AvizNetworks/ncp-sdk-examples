@@ -1,0 +1,4 @@
+# NCP SDK - Required for agent development
+ncp-sdk>=1.2.0
+
+# No additional dependencies — peek_knowledge/search_knowledge ship with the SDK

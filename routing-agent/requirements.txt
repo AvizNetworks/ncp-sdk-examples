@@ -1,0 +1,4 @@
+# NCP SDK - Required for agent development
+# The workflow composition classes (SequentialAgent, ParallelAgent,
+# DynamicParallelAgent, LoopAgent, RoutingAgent) are exported from `ncp`
+ncp-sdk>=1.2.0

@@ -38,7 +38,7 @@ async def backup_devices(hostnames: List[str]) -> dict:
     total = len(hostnames)
     for i, host in enumerate(hostnames, start=1):
         await send_status(f"Backing up {host} ({i}/{total})...")
-        await asyncio.sleep(0.1)  # simulate the backup taking a moment
+        await asyncio.sleep(1.5)  # simulate the backup taking a moment
         size_kb = 12 + (len(host) * 3) % 40
         await send_content(f"- {host}: backup complete ({size_kb} KB)\n")
         results.append({"hostname": host, "status": "success", "size_kb": size_kb})
