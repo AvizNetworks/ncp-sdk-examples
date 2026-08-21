@@ -1,0 +1,9 @@
+# NCP SDK - Required for agent development
+# Agent Skills (Agent(skills=[...]), ncp.load_skill/discover_skills) require a build of
+# ncp-sdk that includes the Skills feature — not yet on PyPI as of writing this example.
+# Until it's published, install from the local sibling checkout instead:
+#   pip install -e ../../ncp-sdk
+ncp-sdk>=1.3.0
+
+# No additional dependencies — device_tools.py uses only Python's standard library
+# (the "device checks" it performs are simulated, not real network calls)
