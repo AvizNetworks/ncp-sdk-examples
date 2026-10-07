@@ -95,3 +95,23 @@ ncp playground --agent <agent-name>
 # Remove agent
 ncp remove --agent <agent-name>
 ```
+
+### Offline Packages (Air-Gapped Servers)
+
+If the NCP server has no internet access, it cannot download the packages
+listed in `requirements.txt` and `apt-requirements.txt`. Build an offline
+package instead. It bundles every apt package and Python wheel the agent
+needs, so the server installs from the package alone (ncp-sdk 1.5.0 or later,
+and Docker on the build machine):
+
+```bash
+cd file-agent
+ncp package . --offline                          # amd64 NCP server (default)
+ncp package . --offline --platform linux/arm64   # arm64 NCP server
+ncp deploy file-agent.ncp                        # or: ncp onboard file-agent.ncp
+```
+
+This works the same from macOS (Intel or Apple Silicon) and Linux. Before the
+package is written, the bundle is test-installed in a container with no
+network. See [Offline Packages](https://github.com/AvizNetworks/ncp-sdk#offline-packages-air-gapped-servers)
+in the SDK guide for how it works and its limitations.

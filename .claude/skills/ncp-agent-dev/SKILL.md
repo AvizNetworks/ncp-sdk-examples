@@ -139,6 +139,7 @@ ncp remove --agent <name> --yes   # undeploy
 | Scaffold | `ncp init <name>` |
 | Validate | `ncp validate` |
 | Ship | `ncp package .` → `ncp deploy <pkg>.ncp [--update]` |
+| Ship to an air-gapped server | `ncp package . --offline [--platform linux/arm64]` bundles all apt/pip deps (needs Docker) |
 | Test (structured) | `ncp ask "<q>" --agent <name> --json` |
 | Programmatic test | `from ncp.testing import ask_agent` → `AgentResult` |
 | Undeploy | `ncp remove --agent <name> --yes` |
