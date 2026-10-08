@@ -1,0 +1,4 @@
+# No dependencies. The project file tools are provided by the platform.
+#
+# Don't list ncp-sdk here: onboarding pip-installs this file into the
+# platform process, which already has the real implementations.
