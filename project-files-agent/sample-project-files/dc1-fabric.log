@@ -1,0 +1,24 @@
+2026-10-04T01:12:07Z spine-01 Bgp: %BGP-3-NOTIFICATION: sent to neighbor 10.10.1.3 (VRF default AS 65103) 4/0 (Hold Timer Expired Error/Unspecified)
+2026-10-04T01:12:07Z spine-01 Bgp: %BGP-5-ADJCHANGE: peer 10.10.1.3 (VRF default AS 65103) old state Established event HoldTimerExpired new state Idle
+2026-10-04T01:12:08Z leaf-03 Ebra: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet49/1, changed state to down
+2026-10-04T01:12:41Z leaf-03 Ebra: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet49/1, changed state to up
+2026-10-04T01:12:44Z spine-01 Bgp: %BGP-5-ADJCHANGE: peer 10.10.1.3 (VRF default AS 65103) old state OpenConfirm event Established new state Established
+2026-10-04T03:30:00Z leaf-05 %ETHPORT-5-IF_SPEED: Interface Ethernet1/12, operational speed changed to 25 Gbps
+2026-10-05T09:01:15Z bleaf-02 Bgp: %BGP-5-ADJCHANGE: peer 192.0.2.1 (VRF default AS 64512) old state Established event Stop new state Idle
+2026-10-05T09:01:15Z bleaf-02 Bgp: %BGP-3-NOTIFICATION: received from neighbor 192.0.2.1 (VRF default AS 64512) 6/2 (Cease/administrative shutdown)
+2026-10-05T09:04:52Z bleaf-02 Bgp: %BGP-5-ADJCHANGE: peer 192.0.2.1 (VRF default AS 64512) old state OpenConfirm event Established new state Established
+2026-10-05T14:22:30Z leaf-07 %ETHPORT-5-IF_DOWN_LINK_FAILURE: Interface Ethernet1/49 is down (Link failure)
+2026-10-05T14:22:31Z leaf-07 %BGP-5-ADJCHANGE: bgp-65107 [5821] neighbor 10.10.0.2 Down - holdtimer expired error
+2026-10-05T14:22:58Z leaf-07 %ETHPORT-5-IF_UP: Interface Ethernet1/49 is up in mode routed
+2026-10-05T14:23:04Z leaf-07 %BGP-5-ADJCHANGE: bgp-65107 [5821] neighbor 10.10.0.2 Up
+2026-10-06T02:15:00Z leaf-01 Ebra: %ETH-4-MTU_MISMATCH: Interface Ethernet49/1 MTU 1500 does not match peer MTU 9214
+2026-10-06T11:47:19Z leaf-07 %ETHPORT-5-IF_DOWN_LINK_FAILURE: Interface Ethernet1/49 is down (Link failure)
+2026-10-06T11:47:20Z leaf-07 %BGP-5-ADJCHANGE: bgp-65107 [5821] neighbor 10.10.0.2 Down - holdtimer expired error
+2026-10-06T11:47:52Z leaf-07 %ETHPORT-5-IF_UP: Interface Ethernet1/49 is up in mode routed
+2026-10-06T11:47:58Z leaf-07 %BGP-5-ADJCHANGE: bgp-65107 [5821] neighbor 10.10.0.2 Up
+2026-10-07T06:05:33Z spine-02 Bgp: %BGP-3-NOTIFICATION: sent to neighbor 10.10.1.7 (VRF default AS 65107) 4/0 (Hold Timer Expired Error/Unspecified)
+2026-10-07T06:05:33Z spine-02 Bgp: %BGP-5-ADJCHANGE: peer 10.10.1.7 (VRF default AS 65107) old state Established event HoldTimerExpired new state Idle
+2026-10-07T06:05:34Z leaf-07 %BGP-5-ADJCHANGE: bgp-65107 [5821] neighbor 10.10.0.2 Down - holdtimer expired error
+2026-10-07T06:06:10Z leaf-07 %BGP-5-ADJCHANGE: bgp-65107 [5821] neighbor 10.10.0.2 Up
+2026-10-07T06:06:10Z spine-02 Bgp: %BGP-5-ADJCHANGE: peer 10.10.1.7 (VRF default AS 65107) old state OpenConfirm event Established new state Established
+2026-10-07T22:40:12Z leaf-06 %SYSMGR-4-FAN_FAIL: Fan module 2 failed
