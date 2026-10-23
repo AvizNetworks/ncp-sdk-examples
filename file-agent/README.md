@@ -1,6 +1,16 @@
 # file-agent
 
-An NCP AI agent project.
+Lists, reads, searches and greps the files of the user the agent runs for, through `ncp.Files`
+(SDK 1.6.0). It sees the current project's files and the organization's system files that the
+user's role may read, exactly as the UI does.
+
+Each file dict has `file_id`, `ref`, `filename`, `scope`, `source`, `status`, `kind`, `content_type`,
+`size_bytes`, `uploaded_at`, `uploader_username`, `tags`, `access_level` and `description`.
+`storage_path` is deprecated (always `None`) and not used here.
+
+Project files need a project: chat with the deployed agent inside a project, or try it with
+`ncp playground --agent file-agent --project <id>`. Without one only system files are listed.
+Archives are not text: use `Files().get_file_path(...)` and extract them yourself.
 
 ## Project Structure
 
@@ -77,7 +87,7 @@ The `--update` flag automatically extracts the agent name from the package.
 Test your agent interactively:
 
 ```bash
-ncp playground --agent file-agent
+ncp playground --agent file-agent --project 12
 
 # Show tool calls and results
 ncp playground --agent file-agent --show-tools
