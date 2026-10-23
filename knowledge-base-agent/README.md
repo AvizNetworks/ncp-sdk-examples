@@ -7,7 +7,7 @@ the SDK's `knowledge/` directory convention and the prebuilt
 ## What this example teaches
 
 - How to ship documents with an agent in a `knowledge/` directory, and have
-  the platform automatically ingest them into a per-agent ChromaDB
+  the platform automatically ingest them into a per-agent Qdrant
   collection at deploy time — no custom ingestion code required.
 - How to give an agent the two prebuilt knowledge tools from
   `ncp.tools.knowledge`:
@@ -50,8 +50,8 @@ The real flow is:
 1. `ncp package .` bundles `knowledge/*.md` into the `.ncp` archive along
    with the rest of the project — no manifest or extra config needed, any
    file under `knowledge/` ships automatically.
-2. `ncp deploy` ingests those files into a ChromaDB collection scoped to
-   this agent.
+2. `ncp deploy` ingests those files into a Qdrant collection scoped to
+   this agent and prints an ingestion report (files, chunks, failures).
 3. Only then, when the agent actually runs (`ncp playground` or `ncp ask`),
    do `peek_knowledge`/`search_knowledge` return real results.
 
@@ -95,7 +95,17 @@ ncp deploy knowledge-base-agent.ncp --update
 ```
 
 Deploying (or updating) re-ingests the current contents of `knowledge/` into
-the agent's ChromaDB collection.
+the agent's Qdrant collection, and prints a report of what was ingested. A
+small set like this one is ingested before the deploy returns; a large one
+(more than 10 files or 5 MB) is ingested in the background and the report
+says `pending`.
+
+To see per-file chunk counts, errors and the last ingest any time:
+
+```bash
+ncp knowledge status knowledge-base-agent
+ncp knowledge status knowledge-base-agent --json
+```
 
 ### 5. Test in Playground
 
