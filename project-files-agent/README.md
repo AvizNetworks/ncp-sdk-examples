@@ -57,8 +57,21 @@ consequences:
 
 - **Use the agent from a project chat.** It works when users pick it directly
   in a project's chat, and when the orchestrator calls it for them.
-- **The SDK playground doesn't work.** `ncp playground` runs with no project,
-  so every tool returns *"No project context available"*.
+- **The playground needs `--project`.** A plain `ncp playground` runs with no
+  project, so every tool returns *"No project context available"*. Start it
+  inside a project you belong to instead:
+
+  ```bash
+  ncp playground --agent project-files-agent --project 12 --show-tools
+  ```
+
+  The id is the project's number (as in its URL). If you are not a member of
+  that project the platform answers "Project 12 not found".
+
+Since SDK 1.6.0 the tools are served by the File Service for the signed-in
+user, so they see exactly what that user sees in the UI. The newer
+`ncp.tools.files` tools (`ask_files`, `grep`, `sql`...) cover the same ground
+and also reach system and chat files; see the `files-agent` example.
 
 As with every platform tool, the copies in `ncp-sdk` are type stubs for IDE
 support and `ncp validate`. Calling them locally raises `NotImplementedError`.
@@ -78,7 +91,7 @@ ncp validate .
 ncp package . -o project-files-agent.ncp
 ```
 
-This needs an `ncp-sdk` release that includes `ncp.tools.knowledge_base`.
+This needs `ncp-sdk` 1.6.0 or newer (and a 2.0.1 platform).
 
 ### 3. Onboard the agent
 
